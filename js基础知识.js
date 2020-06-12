@@ -16,8 +16,6 @@ Math.abs(1 / 3 - (1 - 2 / 3)) < 0.0000001; // true
 // null表示一个空的值，而undefined表示值未定义。大多数情况下，我们都应该用null。undefined仅仅在判断函数参数是否传递的情况下有用。
 
 
-
-
 /******************************************************** String *************************************************************/
 `这是一个
 多行
@@ -153,6 +151,9 @@ for (var i in a) {
     console.log(a[i]); // 'A', 'B', 'C'
 }
 
+for (var x of a) {
+    console.log(x); // 'A', 'B', 'C'
+}
 
 while (true) {
 }
@@ -160,4 +161,68 @@ while (true) {
 do {
 } while (true)
 
+let m = new Map([["s",1],["s",1],["s",1]])
+m.forEach(function(value, key) {
+    console.log(key,value);
+})
 
+/******************************************************** Map Set *************************************************************/
+
+// 初始化Map需要一个二维数组，或者直接初始化一个空Map
+var map = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]]);
+var m = new Map(); // 空Map
+m.set('Adam', 67); // 添加新的key-value
+m.has('Adam'); // 是否存在key 'Adam': true
+m.get('Adam'); // 67
+m.delete('Adam'); // 删除key 'Adam'
+m.get('Adam'); // undefined
+
+
+// 要创建一个Set，需要提供一个Array作为输入，或者直接创建一个空Set，Set中元素不重复
+var s1 = new Set(); // 空Set    
+var s = new Set([1, 2, 3, 3, '3']);
+s.delete(3);
+s.add(4);
+
+
+
+/******************************************************** function *************************************************************/
+
+
+function abs(x, ...rest) {
+    if (typeof x !== 'number') {
+        throw 'Not a number';
+    }
+    arguments.forEach(function(char, index, heSelf){
+        console.log(char, indexm, heSelf);
+    })
+    console.log(res);
+
+    
+    if (x >= 0) {
+        return 
+        x; //这里执行不到，因为return后面自动加了分号
+    } else {
+        return {
+            "name":"这里会返回内容的, { 代表语句没结束" 
+        }
+    }
+}
+
+// 函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。
+
+/******************************************************** 命名空间 *************************************************************/
+// 唯一的全局变量MYAPP:
+var MYAPP = {};
+// 其他变量:
+MYAPP.name = 'myapp';
+MYAPP.version = 1.0;
+// 其他函数:
+MYAPP.foo = function () {
+    return 'foo';
+};
+
+
+
+
+ 
