@@ -55,3 +55,9 @@ callback(type, obj) {
 
 
 // 注意swipe不能设置宽度，否则无法滑动
+
+
+
+//正则
+let regMoney = /^[1-9]+[0-9]*$/;
+regMoney.test(val) //true false
