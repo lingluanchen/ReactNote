@@ -196,7 +196,7 @@ function abs(x, ...rest) {
     arguments.forEach(function(char, index, heSelf){
         console.log(char, indexm, heSelf);
     })
-    console.log(res);
+    console.log(rest);
 
     
     if (x >= 0) {

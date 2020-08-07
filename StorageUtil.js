@@ -1,4 +1,4 @@
-import {AsyncStorage} from 'react-native';
+import { AsyncStorage } from 'react-native';
 
 export default class StorageUtil {
   /**
@@ -7,10 +7,10 @@ export default class StorageUtil {
    * @returns {Promise<T>|*|Promise.<TResult>}
    */
   static get(key, callback) {
-		AsyncStorage.getItem(key, (error, object) => {
-			callback(error, JSON.parse(object));
-		})
-	}
+    AsyncStorage.getItem(key, (error, object) => {
+      callback(error, JSON.parse(object));
+    })
+  }
 
 
   /**

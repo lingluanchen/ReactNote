@@ -1,2 +1,0 @@
-# ReactNote
-just note
